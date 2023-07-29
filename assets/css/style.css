@@ -3,33 +3,25 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f1f1f1;
-  height: 100vh;
+  min-height: 100vh;
 }
+
 header {
   position: sticky;
   top: 0;
 }
+
 header nav {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
   padding: 12px 12px;
   height: 5vh;
-  /* background-color: #1b1f44; */
-  /* background-image: linear-gradient(
-    to top,
-    #1b1f44,
-    #171b40,
-    #12173b,
-    #0e1437,
-    #0a0f33
-  ); */
-
-  background-color: #48626b;
+  background-color: #012936;
   border-bottom: 2px solid #00c6c3;
 }
 
-header nav a {
+.underline-effect {
   font-family: "DM Sans", sans-serif;
   text-decoration: none;
   font-weight: 400;
@@ -37,10 +29,23 @@ header nav a {
   color: #fff;
   margin: 8px 8px;
   transition: 0.2s;
+  padding-bottom: 5px;
+  position: relative;
 }
-
-header nav a:hover {
-  color: #bffcf9;
+.underline-effect::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(10, 241, 230);
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.25s ease-out;
+}
+.underline-effect:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 .container {
@@ -49,9 +54,11 @@ header nav a:hover {
   align-items: center;
   margin-right: auto;
   margin-left: auto;
-  min-height: 50vh;
-  min-width: 90%;
+  min-height: 40vh;
+  min-width: 70%;
+  padding: 28px 12px;
 }
+
 .intro {
   display: flex;
   align-items: center;
@@ -64,6 +71,7 @@ header nav a:hover {
   flex-direction: column;
   padding: 12px 12px;
 }
+
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -71,6 +79,7 @@ h1 {
   color: #1b263b;
   margin: 0;
 }
+
 h1 span {
   display: block;
   color: #99dcf0;
@@ -84,9 +93,11 @@ p {
   color: #1b263b;
   margin: 1px 6px;
 }
+
 .action {
   margin-top: 28px;
 }
+
 .action a {
   display: flex;
   justify-content: center;
@@ -105,57 +116,28 @@ p {
 .action a:hover {
   font-size: 40px;
 }
-h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 32px;
+
+.background {
+  background-image: url(../images/blob.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
+
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
+  color: #1b263b;
+}
+
 .about p {
   font-size: 20px;
   max-width: 40%;
   line-height: 45px;
   text-align: center;
 }
-/* 
-AZUL
-#0B0C10 quase preto
-#1F2833 azul mé
-#C5C6C7 cinza
-#66FCF1 verde agua neon
-#45A29E verde agua escuro
-background-image: linear-gradient(to bottom, #0b0c10, #121419, #171b21, #1b212a, #1f2833);
-*/
-
-/*
-VERDE
-#2C3531 verde coco
-#116466 verde claro
-#41E8E5 verde agua neonzasso*/
-
-/* CINZA E VERDE
-#272727 cinza maneiro coco
-#747474 cinza esbranquiçado
-#14A76C verde neon
-
-background-image: linear-gradient(to bottom, #d5d6fa, #d5d6fa, #d5d6fa, #d5d5f9, #d5d5f9, #d3d3f7, #d2d2f6, #d0d0f4, #ccccf0, #c9c9ed, #c5c5e9, #c2c2e6);
-
-background-image: linear-gradient(to top, #454555, #454558, #46465b, #46465f, #464762, #4e4f6a, #565773, #5e5f7b, #70718b, #83849b, #9697ab, #aaaabc); cinza
-
-LARANJA
-#FF652F laranja neon
-*/
-/* 
-azul e roxo
-#25274D roxo maneiro
-#464866 lilas maneiro 
-#AAABB8 cinza branco
-#29648A azul
-background-image: linear-gradient(to top, #25274d, #2d2f53, #353759, #3e4060, #464866);;
-
-
-#25274D#6D3C6A#AAABB8
-*/
