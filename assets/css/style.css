@@ -141,3 +141,29 @@ h2 {
   line-height: 45px;
   text-align: center;
 }
+h4 {
+  font-family: "Poppins", sans-serif;
+  margin: 10px 5px;
+  color: #073945;
+}
+.boxes {
+  display: flex;
+  gap: 20px;
+  max-width: 30%;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 2px solid #44a4c3;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box img {
+  width: 60px;
+  height: 60px;
+}
