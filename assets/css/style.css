@@ -2,15 +2,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(
-    to top,
-    #1b1f44,
-    #171b40,
-    #12173b,
-    #0e1437,
-    #0a0f33
-  );
-
+  background-color: #f1f1f1;
   height: 100vh;
 }
 header {
@@ -23,7 +15,17 @@ header nav {
   gap: 30px;
   padding: 12px 12px;
   height: 5vh;
-  background-color: #1b1f44;
+  /* background-color: #1b1f44; */
+  /* background-image: linear-gradient(
+    to top,
+    #1b1f44,
+    #171b40,
+    #12173b,
+    #0e1437,
+    #0a0f33
+  ); */
+
+  background-color: #48626b;
   border-bottom: 2px solid #00c6c3;
 }
 
@@ -66,7 +68,7 @@ h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 34px;
-  color: #fff;
+  color: #1b263b;
   margin: 0;
 }
 h1 span {
@@ -79,7 +81,7 @@ p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 25px;
-  color: #fff;
+  color: #1b263b;
   margin: 1px 6px;
 }
 .action {
@@ -91,28 +93,33 @@ p {
   text-decoration: none;
   font-size: 30px;
   letter-spacing: 4px;
-  color: #fff;
+  color: #1b263b;
   padding: 12px;
   border: 2px solid #00c6c3;
   border-radius: 12px;
+  transition: 0.3s;
   min-width: 23vw;
-  transition: 20s;
   font-weight: 600;
 }
 
 .action a:hover {
-  background-image: linear-gradient(
-    to right,
-    #18afce,
-    #34aed8,
-    #6b82bb,
-    #57679c,
-    #424e7d,
-    #2e3560,
-    #1b1f44
-  );
+  font-size: 40px;
 }
-
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about p {
+  font-size: 20px;
+  max-width: 40%;
+  line-height: 45px;
+  text-align: center;
+}
 /* 
 AZUL
 #0B0C10 quase preto
