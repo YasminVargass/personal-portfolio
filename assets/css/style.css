@@ -50,13 +50,16 @@ header nav {
 
 .container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   margin-right: auto;
   margin-left: auto;
   min-height: 40vh;
   min-width: 70%;
   padding: 28px 12px;
+}
+
+.spacing {
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .intro {
@@ -127,11 +130,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 32px;
 }
 
 h2 {
   font-family: "Poppins", sans-serif;
   font-size: 34px;
+  display: block;
   color: #1b263b;
 }
 
@@ -146,23 +151,33 @@ h4 {
   margin: 10px 5px;
   color: #073945;
 }
+.align {
+  flex-direction: column;
+  align-items: center;
+}
 .boxes {
   display: flex;
+  margin-top: 14px;
   gap: 20px;
-  max-width: 30%;
+  max-width: 31%;
   flex-wrap: wrap;
 }
 
 .box {
-  border: 2px solid #44a4c3;
+  border: 3px solid #44a4c3;
   width: 120px;
   height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  border-radius: 25% 10%;
+  transition: 0.3s;
 }
 
+.box:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 5px #006eff70;
+}
 .box img {
   width: 60px;
   height: 60px;
