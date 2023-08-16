@@ -182,3 +182,63 @@ h4 {
   width: 60px;
   height: 60px;
 }
+
+.icons{
+  margin-top: 23px;
+}
+
+.project-apadam{
+height: 300px;
+width: 550px;
+border-radius: 15px;
+}   
+.card{
+width: 550px;
+height: 300px;
+border-radius: 20px;
+border: 8px solid #abc3c8;
+position: relative;
+overflow: hidden;
+}
+
+.card:hover .card-body{
+bottom: 0;
+}
+
+.card-icon{
+width: 80px;
+height: 60px;
+}
+
+.card-body{
+width: 100%;
+height: 100%;
+bottom: -100%;
+right: 0;
+position: absolute;
+background: #1f3d4738;
+backdrop-filter: blur(5px);
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+transition: 2s;
+}
+
+.card-title{
+font-family: "Poppins", sans-serif;
+text-transform: uppercase;
+font-size: 50px;
+font-weight: 500;
+color: #fff;
+ margin: 8px;
+
+}
+.card-sub-title{
+font-size: 22px;
+color: #fff;
+font-weight: 300;
+margin: 16px;
+text-align: center;
+}
+
