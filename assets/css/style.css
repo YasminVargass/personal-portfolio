@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   box-sizing: border-box;
   margin: 0;
@@ -84,7 +89,7 @@ h1 {
 }
 
 h1 span {
-  display: block;
+  display: inline-block;
   color: #99dcf0;
   font-size: 59px;
 }
