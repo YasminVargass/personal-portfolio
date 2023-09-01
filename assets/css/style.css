@@ -18,14 +18,22 @@ header {
 
 header nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 30px;
   padding: 12px 12px;
-  height: 5vh;
+  height: 8vh;
   background-color: #012936;
   border-bottom: 2px solid #00c6c3;
 }
+header nav div{
+  margin: 8px;
+}
 
+header nav span{
+  color: #fff;
+font-size: 32px;
+font-family: 'Quando', serif;
+}
 .underline-effect {
   font-family: "DM Sans", sans-serif;
   text-decoration: none;
@@ -55,11 +63,10 @@ header nav {
 
 .container {
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 40vh;
+  min-height: 50vh;
   min-width: 70%;
   padding: 28px 12px;
+  margin: 12px;
 }
 
 .spacing {
@@ -90,7 +97,8 @@ h1 {
 
 h1 span {
   display: inline-block;
-  color: #99dcf0;
+  /* color: #99dcf0; */
+  color: #3b9fbd;;
   font-size: 59px;
 }
 
@@ -114,7 +122,7 @@ p {
   letter-spacing: 4px;
   color: #1b263b;
   padding: 12px;
-  border: 2px solid #00c6c3;
+  border: 2px solid #4c8a9c;
   border-radius: 12px;
   transition: 0.3s;
   min-width: 23vw;
@@ -128,7 +136,7 @@ p {
 .background {
   background-image: url(../images/blob.svg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 97% 97%;
 }
 
 .about {
@@ -143,11 +151,12 @@ h2 {
   font-size: 34px;
   display: block;
   color: #1b263b;
+  margin: 24px;
 }
 
 .about p {
   font-size: 20px;
-  max-width: 40%;
+  max-width: 34%;
   line-height: 45px;
   text-align: center;
 }
@@ -168,7 +177,7 @@ h4 {
   flex-wrap: wrap;
 }
 
-.box {
+.boxes .box {
   border: 3px solid #44a4c3;
   width: 120px;
   height: 120px;
@@ -179,11 +188,11 @@ h4 {
   transition: 0.3s;
 }
 
-.box:hover {
+.boxes .box:hover {
   cursor: pointer;
   box-shadow: 3px 3px 5px #006eff70;
 }
-.box img {
+.boxes .box img {
   width: 60px;
   height: 60px;
 }
@@ -192,30 +201,39 @@ h4 {
   margin-top: 23px;
 }
 
+.project{
+  display: flex;
+  gap: 40px;
+}
+
 .project-apadam{
 height: 300px;
 width: 550px;
 border-radius: 15px;
 }   
+
 .card{
 width: 550px;
 height: 300px;
 border-radius: 20px;
-border: 8px solid #abc3c8;
+/* border: 8px solid #abc3c8; */
+border:5px solid #046074;
 position: relative;
 overflow: hidden;
+cursor: pointer;
+
 }
 
 .card:hover .card-body{
 bottom: 0;
 }
 
-.card-icon{
+.card .card-icon{
 width: 80px;
 height: 60px;
 }
 
-.card-body{
+.card .card-body{
 width: 100%;
 height: 100%;
 bottom: -100%;
@@ -230,7 +248,7 @@ align-items: center;
 transition: 2s;
 }
 
-.card-title{
+.card .card-title{
 font-family: "Poppins", sans-serif;
 text-transform: uppercase;
 font-size: 50px;
@@ -239,7 +257,7 @@ color: #fff;
  margin: 8px;
 
 }
-.card-sub-title{
+.card .card-sub-title{
 font-size: 22px;
 color: #fff;
 font-weight: 300;
@@ -247,3 +265,14 @@ margin: 16px;
 text-align: center;
 }
 
+.repositories-link{
+  font-size: 20px;
+  text-align: center;
+  min-width: 100%;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+.repositories-link a {
+  text-decoration: none;
+}
