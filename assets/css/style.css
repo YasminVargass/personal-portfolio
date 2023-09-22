@@ -290,7 +290,7 @@ text-align: center;
 
 footer{
   min-height: 60px;
-  background-color: #074955;
+ border-top: 3px inset #00c6c3;
 }
 
 footer div{
