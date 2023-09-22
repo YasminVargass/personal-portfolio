@@ -292,6 +292,7 @@ text-align: center;
 footer{
   min-height: 60px;
  border-top: 3px inset #00c6c3;
+ margin-top: 25px;
 }
 
 footer div{
