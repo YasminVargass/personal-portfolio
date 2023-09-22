@@ -180,7 +180,7 @@ h4 {
   display: flex;
   margin-top: 14px;
   gap: 20px;
-  max-width: 31%;
+  max-width: 30%;
   flex-wrap: wrap;
 }
 
@@ -191,7 +191,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 25% 10%;
+  border-radius: 12%;
   transition: 0.3s;
 }
 
@@ -307,4 +307,54 @@ footer div img{
 
 footer div img:hover{
   height: 45px;
+}
+
+
+@media(max-width: 1660px){
+  .container {
+    padding: 28px 0px;
+    margin: 0px;
+ } 
+
+  .boxes {
+    max-width: 40%;
+ }
+}
+
+@media(max-width: 1440px){
+  .intro {
+    align-items: flex-start;
+ }
+.about p {
+  max-width: 50%;
+ }
+.background {
+  background-size: 96% 100%;
+ }
+
+}
+
+@media(max-width: 1024px){
+  h1{
+    font-size: 27px;
+  }
+  h1 span{
+    font-size: 50px;
+  }
+  p{
+    font-size: 19px;
+  }
+.about p {
+  max-width: 60%;
+  font-size: 19px;
+ }
+.boxes .box {
+  flex: auto;
+ }
+
+}
+
+@media(max-width: 768px){
+
+
 }
