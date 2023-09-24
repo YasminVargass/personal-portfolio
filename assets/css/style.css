@@ -33,7 +33,7 @@ header nav a {
   color: #fff;
 }
 
-header nav .topnav{
+header nav .navbar{
   margin: 8px;
 }
 
@@ -54,6 +54,7 @@ font-family: 'Quando', serif;
   background: #fff;
   height: 2px;
   margin: 8px;
+  transition: 0.3s;
 }
 
 .underline-effect {
@@ -218,9 +219,6 @@ h4 {
   height: 60px;
 }
 
-.icons{
-  margin-top: 23px;
-}
 
 .project{
   display: flex;
@@ -228,62 +226,71 @@ h4 {
 }
 
 .project-apadam{
-height: 300px;
+  height: 300px;
 width: 550px;
 border-radius: 15px;
+
 }   
 
 .card{
-width: 550px;
-height: 300px;
-border-radius: 20px;
-/* border: 8px solid #abc3c8; */
-border:5px solid #046074;
-position: relative;
-overflow: hidden;
-cursor: pointer;
+  width: 550px;
+  height: 300px;
+  border-radius: 20px;
+  border:5px solid #046074;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 
 }
 
 .card:hover .card-body{
-bottom: 0;
+  bottom: 0;
 }
 
 .card .card-icon{
-width: 80px;
-height: 60px;
+  width: 60px;
+  height: 40px;
 }
 
 .card .card-body{
-width: 100%;
-height: 100%;
-bottom: -100%;
-right: 0;
-position: absolute;
-background: #1f3d4738;
-backdrop-filter: blur(5px);
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-transition: 2s;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  right: 0;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 2s;
 }
 
 .card .card-title{
-font-family: "Poppins", sans-serif;
-text-transform: uppercase;
-font-size: 50px;
-font-weight: 500;
-color: #fff;
- margin: 8px;
-
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 44px;
+  font-weight: 500;
+  color: #fff;
 }
 .card .card-sub-title{
-font-size: 22px;
-color: #fff;
-font-weight: 300;
-margin: 16px;
-text-align: center;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  line-height: 32px;
+}
+.card .card-link{
+  color: #fff;
+  
+}
+.card .card-link a{
+  text-decoration: none;
+}
+
+.icons{
+  margin-top: 13px;
 }
 
 .repositories-link{
@@ -312,7 +319,7 @@ footer{
 footer div{
   display: flex;
   justify-content: center;
-  padding: 8px;
+  padding: 16px;
   gap: 50px;
 }
 footer div img{
@@ -374,15 +381,17 @@ footer div img:hover{
   }
 .navbar{
   position: absolute;
-  top: 6px;
+  top: 64px;
   right: 0;
 width: 100vw;
-height: 100vh;
+height: 265vh;
 backdrop-filter: blur(5px);
 flex-direction: column;
 align-items: center;
 justify-content: space-around;
 transform: translateX(100%);
+margin: 0;
+transition: transform 0.3s ease-in; 
 }
 .navbar a{
   margin-left: 0;
@@ -390,6 +399,7 @@ transform: translateX(100%);
 }
 
 .navbar.active{
+
   transform: translateX(0);
 }
 
@@ -398,3 +408,25 @@ transform: translateX(100%);
 }
 }
 
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
