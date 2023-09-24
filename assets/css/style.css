@@ -34,6 +34,7 @@ header nav a {
 }
 
 header nav .navbar{
+  display: flex;
   margin: 8px;
 }
 
@@ -379,6 +380,13 @@ footer div img:hover{
  html, body {
     overflow-x: hidden;
   }
+  header nav .navbar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    margin: 20px 0;
+    padding: 50px;
+  }
 .navbar{
   position: absolute;
   top: 64px;
@@ -395,9 +403,11 @@ transition: transform 0.3s ease-in;
 }
 .navbar a{
   margin-left: 0;
-  opacity: 0;
+  opacity: 0; 
+  color: #073945;
+  font-size: 40px;
+  animation: navLinkFade 0.5s ease forwards;
 }
-
 .navbar.active{
 
   transform: translateX(0);

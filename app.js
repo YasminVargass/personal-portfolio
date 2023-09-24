@@ -10,7 +10,7 @@ constructor(mobileMenu, navBar, mobileLinks, html){
 
 this.mobileMenu = document.querySelector(mobileMenu);
 this.navBar = document.querySelector(navBar);
-this.mobileLinks = document.querySelector(mobileLinks);
+this.mobileLinks = document.querySelectorAll(mobileLinks);
 this.html = document.querySelector(html);
 this.activeClass = "active";
 
@@ -28,24 +28,32 @@ animateLinks() {
 }
 
 
-handleClick(){
+handleClick(event){
   this.navBar.classList.toggle(this.activeClass);
   this.mobileMenu.classList.toggle(this.activeClass);
 
   const currentOverflow = this.html.style.overflow;
-    
-  if (currentOverflow == "hidden") {
-    this.html.style.overflow = "auto";
-  } else {
-    this.html.style.overflow = "hidden";
-  }
+  
+  this.html.style.overflow = this.overflowHidden ? "auto" : "hidden";
+  this.overflowHidden = !this.overflowHidden; // Inverte o valor da variável de estado
 
-  }
+  event.stopPropagation(); // Impede a propagação do evento de clique do menu móvel
+}
 
-
+  
 
 addClickEvent(){
-  this.mobileMenu.addEventListener("click", this.handleClick)
+  this.mobileMenu.addEventListener("click", this.handleClick);
+  this.mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      this.navBar.classList.remove(this.activeClass);
+      this.mobileMenu.classList.remove(this.activeClass);
+
+      // Sempre definir overflow como "auto" quando um link é clicado
+      this.html.style.overflow = "auto";
+      this.overflowHidden = false; // Redefine a variável de estado para "false"
+    });
+  });
 }
 
 init(){
