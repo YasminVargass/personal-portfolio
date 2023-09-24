@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   box-sizing: border-box;
   margin: 0;
@@ -380,6 +383,7 @@ footer div img:hover{
  html, body {
     overflow-x: hidden;
   }
+  
   header nav .navbar {
     display: flex;
     justify-content: flex-start;

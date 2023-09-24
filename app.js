@@ -34,13 +34,13 @@ handleClick(event){
 
   const currentOverflow = this.html.style.overflow;
   
-  this.html.style.overflow = this.overflowHidden ? "auto" : "hidden";
+  this.html.style.overflow = this.overflowHidden ? "scroll" : "hidden";
   this.overflowHidden = !this.overflowHidden; // Inverte o valor da variável de estado
 
   event.stopPropagation(); // Impede a propagação do evento de clique do menu móvel
 }
 
-  
+
 
 addClickEvent(){
   this.mobileMenu.addEventListener("click", this.handleClick);
@@ -49,8 +49,8 @@ addClickEvent(){
       this.navBar.classList.remove(this.activeClass);
       this.mobileMenu.classList.remove(this.activeClass);
 
-      // Sempre definir overflow como "auto" quando um link é clicado
-      this.html.style.overflow = "auto";
+      // Sempre definir overflow como "scroll" quando um link é clicado
+      this.html.style.overflow = "scroll";
       this.overflowHidden = false; // Redefine a variável de estado para "false"
     });
   });
