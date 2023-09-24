@@ -421,7 +421,33 @@ transition: transform 0.3s ease-in;
     display: block;
 }
 }
-
+@media(max-width: 425px){
+  .container {
+    flex-direction: column-reverse;
+  }
+  h1 {
+    font-size: 22px;
+}
+h1 span {
+  font-size: 40px;
+}
+p {
+  font-size: 17px;
+}
+.action {
+  margin-top: 10px;
+  margin-left: 16px;
+}
+.action a {
+  font-size: 25px;
+}
+.background {
+  background-size: 100% 110%;
+}.about p {
+  max-width: 95%;
+  font-size: 18px;
+}
+}
 @keyframes navLinkFade {
   from {
     opacity: 0;
