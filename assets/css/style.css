@@ -432,7 +432,7 @@ h1 span {
   font-size: 40px;
 }
 p {
-  font-size: 17px;
+  font-size: 18px;
 }
 .action {
   margin-top: 10px;
@@ -446,6 +446,12 @@ p {
 }.about p {
   max-width: 95%;
   font-size: 18px;
+}.card .card-sub-title {
+  font-size: 14px;
+  line-height: 26px;
+}
+.card .card-title {
+  font-size: 30px;
 }
 }
 @keyframes navLinkFade {
