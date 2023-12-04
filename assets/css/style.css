@@ -196,11 +196,20 @@ h4 {
   align-items: center;
 }
 .boxes {
-  display: flex;
+  /* display: flex;
   margin-top: 14px;
   gap: 20px;
   max-width: 30%;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 14px;
+    max-width: 800px; /* Adjust the max-width based on your design */
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .boxes .box {
@@ -421,14 +430,13 @@ transition: transform 0.3s ease-in;
 }
 }
 @media(max-width: 425px){
-  .container {
-    flex-direction: column-reverse;
-  }
+ 
+  .boxes {
+    grid-template-columns: 1fr 1fr;
+    max-width: 60%;
+}
   h1 {
     font-size: 22px;
-}
-h1 span {
-  font-size: 40px;
 }
 p {
   font-size: 18px;
@@ -438,21 +446,67 @@ p {
   margin-left: 16px;
 }
 .action a {
-  font-size: 25px;
+  font-size: 24px;
 }
 .background {
   background-size: 100% 110%;
-}.about p {
+}
+.about p {
   max-width: 95%;
   font-size: 18px;
-}.card .card-sub-title {
-  font-size: 14px;
+}
+.card .card-sub-title {
+  font-size: 16px;
   line-height: 26px;
 }
 .card .card-title {
   font-size: 30px;
 }
+h1 span {
+  font-size: 22px;
 }
+.card {
+  width: 350px;
+  height: 175px;}
+
+.project-apadam {
+  object-fit: cover;
+  height: auto;
+  max-width: 100%;}
+
+.repositories-link {
+    font-size: 17px;
+  }
+}
+
+@media(max-width: 320px){
+  .intro {
+    align-items: center;
+}
+#home .container{
+  flex-direction: column-reverse;
+}
+.background {
+  background-size: 110% 120%;
+}
+.boxes{
+  max-width: 80%;
+}
+.card {
+  width: 290px;
+  height: 150px;
+}
+#projects .container{
+  min-height: 40vh;
+}
+}
+
+
+
+
+
+
+
 @keyframes navLinkFade {
   from {
     opacity: 0;
